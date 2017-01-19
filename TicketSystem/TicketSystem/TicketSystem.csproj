@@ -46,16 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmCreateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmCreateCategory.Designer.cs">
+      <DependentUpon>FrmCreateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreatePerformer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreatePerformer.Designer.cs">
+      <DependentUpon>FrmCreatePerformer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateEvent.Designer.cs">
+      <DependentUpon>FrmCreateEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreatePerformer.resx">
+      <DependentUpon>FrmCreatePerformer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateEvent.resx">
+      <DependentUpon>FrmCreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
