@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSystem", "TicketSystem\TicketSystem.csproj", "{B6DF08F2-0DC7-469A-95E9-49C8F18652E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06CCC730-CC7D-4290-98E7-9D5076217335}"
+	ProjectSection(SolutionItems) = preProject
+		..\CreateTicketSystemDB.sql = ..\CreateTicketSystemDB.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
