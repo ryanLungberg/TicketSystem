@@ -4,8 +4,9 @@ USE Master
 GO
 
 -- Will Check to see if Database already exists, if so will drop current form of database than create a new Database
-DROP DATABASE IF EXISTS TicketSystemDB
-    
+IF DB_ID('TicketSystemDB') IS NOT NULL
+	DROP DATABASE [TicketSystemDB]
+GO
 GO
 
 CREATE DATABASE TicketSystemDB
@@ -15,22 +16,10 @@ USE TicketSystemDB
 GO
 
 -- Create Tables
-CREATE TABLE Events
-(
-EventID				int				Identity PRIMARY KEY
-,EventName			varchar(50)		NOT NULL
-,EventDates			Datetime		NOT NULL
-,EventPriceRange	varchar(50)		NULL
-,EventPromoter		varchar(50)		NULL
-,EventInfo			varchar(MAX)	NULL
-,VenueID			int				NOT NULL
-,GenreID			int				NOT NULL
-,PerformerID		int				NOT NULL
-)
 
 CREATE TABLE Venues
 (
-VenueID			int				Identity PRIMARY KEY
+VenueID			int				Identity(1,1)
 ,VenueName		varchar(50)		NOT NULL
 ,VenueType		varchar(50)		NULL
 ,VenueURL		varchar(50)		NULL
@@ -38,19 +27,36 @@ VenueID			int				Identity PRIMARY KEY
 ,VenueCity		varchar(50)		NOT NULL
 ,VenueState		char(2)			NOT NULL
 ,VenueInfo		varchar(MAX)	NULL
+,CONSTRAINT PK_VenueID PRIMARY KEY CLUSTERED (VenueID)
 )
 
 CREATE TABLE Genre
 (
-GenreID		int				Identity PRIMARY KEY
+GenreID		int				Identity(1,1)
 ,GenreName	varchar(50)		NOT NULL
 ,GenreInfo	varchar(MAX)	NULL
+,CONSTRAINT PK_GenreID PRIMARY KEY CLUSTERED (GenreID)
 )
 
 CREATE TABLE Performer
 (
-PerformerID		int				Identity PRIMARY KEY
+PerformerID		int				Identity(1,1)
 ,PerformerName	varchar(50)		NOT NULL
 ,PerformerURL	varchar(50)		NULL
 ,PerformerInfo	varchar(MAX)	NULL
+,CONSTRAINT PK_PerformerID PRIMARY KEY CLUSTERED (PerformerID)
+)
+
+CREATE TABLE Events
+(
+EventID				int				Identity(1,1)
+,EventName			varchar(50)		NOT NULL
+,EventDates			Datetime		NOT NULL
+,EventPriceRange	varchar(50)		NULL
+,EventPromoter		varchar(50)		NULL
+,EventInfo			varchar(MAX)	NULL
+,VenueID			int				FOREIGN KEY REFERENCES Venues(VenueID)
+,GenreID			int				FOREIGN KEY REFERENCES Genre(GenreID)
+,PerformerID		int				FOREIGN KEY REFERENCES Performer(PerformerID)
+,CONSTRAINT PK_EventID PRIMARY KEY CLUSTERED (EventID)
 )
