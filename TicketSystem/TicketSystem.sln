@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06CCC730-CC7D-4290-98E7-9D5076217335}"
 	ProjectSection(SolutionItems) = preProject
 		..\CreateTicketSystemDB.sql = ..\CreateTicketSystemDB.sql
+		..\InsertTicketSystemDB.sql = ..\InsertTicketSystemDB.sql
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TicketSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EventStartDate" Type="date" Nullable="false" />
+          <Property Name="EventEndDate" Type="date" Nullable="false" />
+          <Property Name="EventPriceRange" Type="varchar" MaxLength="50" />
+          <Property Name="EventPromoter" Type="varchar" MaxLength="50" />
+          <Property Name="EventInfo" Type="varchar(max)" />
+          <Property Name="VenueID" Type="int" />
+          <Property Name="GenreID" Type="int" />
+          <Property Name="PerformerID" Type="int" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GenreName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GenreInfo" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Performer">
+          <Key>
+            <PropertyRef Name="PerformerID" />
+          </Key>
+          <Property Name="PerformerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PerformerName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PerformerURL" Type="varchar" MaxLength="50" />
+          <Property Name="PerformerInfo" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Venues">
+          <Key>
+            <PropertyRef Name="VenueID" />
+          </Key>
+          <Property Name="VenueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VenueName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VenueType" Type="varchar" MaxLength="50" />
+          <Property Name="VenueURL" Type="varchar" MaxLength="50" />
+          <Property Name="VenueAddress" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VenueCity" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VenueState" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="VenueInfo" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK__Events__GenreID__173876EA">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Events__Performe__182C9B23">
+          <End Role="Performer" Type="Self.Performer" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Performer">
+              <PropertyRef Name="PerformerID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="PerformerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Events__VenueID__164452B1">
+          <End Role="Venues" Type="Self.Venues" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venues">
+              <PropertyRef Name="VenueID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="VenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TicketSystemDBModelStoreContainer">
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Performer" EntityType="Self.Performer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venues" EntityType="Self.Venues" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Events__GenreID__173876EA" Association="Self.FK__Events__GenreID__173876EA">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Events__Performe__182C9B23" Association="Self.FK__Events__Performe__182C9B23">
+            <End Role="Performer" EntitySet="Performer" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Events__VenueID__164452B1" Association="Self.FK__Events__VenueID__164452B1">
+            <End Role="Venues" EntitySet="Venues" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TicketSystemDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EventStartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EventEndDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EventPriceRange" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EventPromoter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EventInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VenueID" Type="Int32" />
+          <Property Name="GenreID" Type="Int32" />
+          <Property Name="PerformerID" Type="Int32" />
+          <NavigationProperty Name="Genre" Relationship="Self.FK__Events__GenreID__173876EA" FromRole="Events" ToRole="Genre" />
+          <NavigationProperty Name="Performer" Relationship="Self.FK__Events__Performe__182C9B23" FromRole="Events" ToRole="Performer" />
+          <NavigationProperty Name="Venue" Relationship="Self.FK__Events__VenueID__164452B1" FromRole="Events" ToRole="Venues" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GenreName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GenreInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Events" Relationship="Self.FK__Events__GenreID__173876EA" FromRole="Genre" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Performer">
+          <Key>
+            <PropertyRef Name="PerformerID" />
+          </Key>
+          <Property Name="PerformerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PerformerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PerformerURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PerformerInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Events" Relationship="Self.FK__Events__Performe__182C9B23" FromRole="Performer" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Venue">
+          <Key>
+            <PropertyRef Name="VenueID" />
+          </Key>
+          <Property Name="VenueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VenueName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VenueType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VenueURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VenueAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VenueCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VenueState" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="VenueInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Events" Relationship="Self.FK__Events__VenueID__164452B1" FromRole="Venues" ToRole="Events" />
+        </EntityType>
+        <Association Name="FK__Events__GenreID__173876EA">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Events__Performe__182C9B23">
+          <End Role="Performer" Type="Self.Performer" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Performer">
+              <PropertyRef Name="PerformerID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="PerformerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Events__VenueID__164452B1">
+          <End Role="Venues" Type="Self.Venue" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venues">
+              <PropertyRef Name="VenueID" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="VenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TicketSystemDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Events" EntityType="Self.Event" />
+          <EntitySet Name="Genres" EntityType="Self.Genre" />
+          <EntitySet Name="Performers" EntityType="Self.Performer" />
+          <EntitySet Name="Venues" EntityType="Self.Venue" />
+          <AssociationSet Name="FK__Events__GenreID__173876EA" Association="Self.FK__Events__GenreID__173876EA">
+            <End Role="Genre" EntitySet="Genres" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Events__Performe__182C9B23" Association="Self.FK__Events__Performe__182C9B23">
+            <End Role="Performer" EntitySet="Performers" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Events__VenueID__164452B1" Association="Self.FK__Events__VenueID__164452B1">
+            <End Role="Venues" EntitySet="Venues" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TicketSystemDBModelStoreContainer" CdmEntityContainer="TicketSystemDBEntities">
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="TicketSystemDBModel.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="EventStartDate" ColumnName="EventStartDate" />
+                <ScalarProperty Name="EventEndDate" ColumnName="EventEndDate" />
+                <ScalarProperty Name="EventPriceRange" ColumnName="EventPriceRange" />
+                <ScalarProperty Name="EventPromoter" ColumnName="EventPromoter" />
+                <ScalarProperty Name="EventInfo" ColumnName="EventInfo" />
+                <ScalarProperty Name="VenueID" ColumnName="VenueID" />
+                <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+                <ScalarProperty Name="PerformerID" ColumnName="PerformerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genres">
+            <EntityTypeMapping TypeName="TicketSystemDBModel.Genre">
+              <MappingFragment StoreEntitySet="Genre">
+                <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+                <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+                <ScalarProperty Name="GenreInfo" ColumnName="GenreInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Performers">
+            <EntityTypeMapping TypeName="TicketSystemDBModel.Performer">
+              <MappingFragment StoreEntitySet="Performer">
+                <ScalarProperty Name="PerformerID" ColumnName="PerformerID" />
+                <ScalarProperty Name="PerformerName" ColumnName="PerformerName" />
+                <ScalarProperty Name="PerformerURL" ColumnName="PerformerURL" />
+                <ScalarProperty Name="PerformerInfo" ColumnName="PerformerInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Venues">
+            <EntityTypeMapping TypeName="TicketSystemDBModel.Venue">
+              <MappingFragment StoreEntitySet="Venues">
+                <ScalarProperty Name="VenueID" ColumnName="VenueID" />
+                <ScalarProperty Name="VenueName" ColumnName="VenueName" />
+                <ScalarProperty Name="VenueType" ColumnName="VenueType" />
+                <ScalarProperty Name="VenueURL" ColumnName="VenueURL" />
+                <ScalarProperty Name="VenueAddress" ColumnName="VenueAddress" />
+                <ScalarProperty Name="VenueCity" ColumnName="VenueCity" />
+                <ScalarProperty Name="VenueState" ColumnName="VenueState" />
+                <ScalarProperty Name="VenueInfo" ColumnName="VenueInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
