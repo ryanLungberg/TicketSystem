@@ -1,5 +1,3 @@
--- Insert some data into the TicketsytemDB
-
 USE [TicketSystemDB]
 GO
 
@@ -41,12 +39,8 @@ INSERT INTO [dbo].[Performer]
 GO
 
 
-
 USE [TicketSystemDB]
 GO
-
-ALTER TABLE Events 	ADD EventEndDate	Datetime	NOT NULL;
-EXEC sp_rename 'Events.EventDates', 'EventStartDate';
 
 
 USE [TicketSystemDB]
@@ -63,15 +57,13 @@ INSERT INTO [dbo].[Events]
            ,[PerformerID]
            ,[EventEndDate])
      VALUES
-           ('Bruno Mars: 24K Magic World Tour','Jul-24-2017' ,'$24.00 - $200.00' ,null ,'TODO'
-           ,1 ,1 ,1 , 'Jul-24-2017')
+           ('Bruno Mars: 24K Magic World Tour','20170218 ' ,'$24.00 - $200.00' ,null ,'TODO'
+           ,1 ,1 ,1 , '20170618 ')
 		   
-		   ,('WWE SmackDown','Feb-7-2017' ,'$50.00 - $250.00' ,'WWE' ,'TODO'
-           ,2 ,2 ,2 ,'Feb-7-2017')
+		   ,('WWE SmackDown','20171108 ' ,'$50.00 - $250.00' ,'WWE' ,'TODO'
+           ,2 ,2 ,2 ,'20171108 ')
 
-		   ,('Sarah Silverman Standup' ,'Feb-7-2017' ,'$25.00- $75.00' ,NULL ,'TODO'
-           ,3 ,3 ,3 ,'Feb-7-2017')
+		   ,('Sarah Silverman Standup' ,'20170610 ' ,'$25.00- $75.00' ,NULL ,'TODO'
+           ,3 ,3 ,3 ,'20170618 ')
 GO
 
-SELECT *
-FROM Venues

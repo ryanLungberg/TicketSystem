@@ -51,7 +51,8 @@ CREATE TABLE Events
 (
 EventID				int				Identity(1,1)
 ,EventName			varchar(50)		NOT NULL
-,EventDates			Datetime		NOT NULL
+,EventStartDate		Date			NOT NULL
+,EventEndDate			Date			NOT NULL 
 ,EventPriceRange	varchar(50)		NULL
 ,EventPromoter		varchar(50)		NULL
 ,EventInfo			varchar(MAX)	NULL
