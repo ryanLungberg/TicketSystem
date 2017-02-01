@@ -20,6 +20,15 @@ namespace TicketSystem
         private void TicketSystem_Load(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1000, 700);
+            populateListBoxWithAllEvents();
+        }
+
+        public void populateListBoxWithAllEvents()
+        {
+            TicketSystemDBEntities db = new TicketSystemDBEntities();
+            List<Event> listEvents = db.Events.ToList();
+            lstBoxEvents.DataSource = listEvents;
+            //lstBoxEvents.DisplayMember = "";
         }
     }
 }

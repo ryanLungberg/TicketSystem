@@ -87,6 +87,7 @@
     <Compile Include="Genre.cs">
       <DependentUpon>TicketSystemModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Performer.cs">
       <DependentUpon>TicketSystemModel.tt</DependentUpon>
     </Compile>

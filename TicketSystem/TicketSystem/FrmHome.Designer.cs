@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstEvents = new System.Windows.Forms.ListBox();
+            this.lstBoxEvents = new System.Windows.Forms.ListBox();
             this.lstSelectCategory = new System.Windows.Forms.ListBox();
             this.txtSearchPerformer = new System.Windows.Forms.TextBox();
             this.txtSearchVenue = new System.Windows.Forms.TextBox();
@@ -41,15 +41,15 @@
             this.btnEventDetails = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lstEvents
+            // lstBoxEvents
             // 
-            this.lstEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstEvents.FormattingEnabled = true;
-            this.lstEvents.ItemHeight = 31;
-            this.lstEvents.Location = new System.Drawing.Point(153, 162);
-            this.lstEvents.Name = "lstEvents";
-            this.lstEvents.Size = new System.Drawing.Size(764, 996);
-            this.lstEvents.TabIndex = 0;
+            this.lstBoxEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstBoxEvents.FormattingEnabled = true;
+            this.lstBoxEvents.ItemHeight = 31;
+            this.lstBoxEvents.Location = new System.Drawing.Point(153, 162);
+            this.lstBoxEvents.Name = "lstBoxEvents";
+            this.lstBoxEvents.Size = new System.Drawing.Size(764, 996);
+            this.lstBoxEvents.TabIndex = 0;
             // 
             // lstSelectCategory
             // 
@@ -163,8 +163,8 @@
             this.Controls.Add(this.txtSearchVenue);
             this.Controls.Add(this.txtSearchPerformer);
             this.Controls.Add(this.lstSelectCategory);
-            this.Controls.Add(this.lstEvents);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Controls.Add(this.lstBoxEvents);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TicketSystem";
             this.Text = "TicketSystem";
             this.Load += new System.EventHandler(this.TicketSystem_Load);
@@ -175,7 +175,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstEvents;
+        private System.Windows.Forms.ListBox lstBoxEvents;
         private System.Windows.Forms.ListBox lstSelectCategory;
         private System.Windows.Forms.TextBox txtSearchPerformer;
         private System.Windows.Forms.TextBox txtSearchVenue;
