@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace TicketSystem
 {
@@ -28,7 +29,10 @@ namespace TicketSystem
             TicketSystemDBEntities db = new TicketSystemDBEntities();
             List<Event> listEvents = db.Events.ToList();
             lstBoxEvents.DataSource = listEvents;
-            //lstBoxEvents.DisplayMember = "";
+            lstBoxEvents.DisplayMember = nameof(Event.EventNameAndDates);
+            lstBoxEvents.ValueMember = nameof(Event.EventID);
+
+           
         }
     }
 }

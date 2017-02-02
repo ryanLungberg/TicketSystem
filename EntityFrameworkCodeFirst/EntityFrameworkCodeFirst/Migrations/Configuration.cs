@@ -1,18 +1,19 @@
-namespace TicketSystem.Migrations
+namespace EntityFrameworkCodeFirst.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TicketSystem.TicketSystemDBEntities>
+    internal sealed class Configuration : DbMigrationsConfiguration<EntityFrameworkCodeFirst.StudentDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "EntityFrameworkCodeFirst.StudentDB";
         }
 
-        protected override void Seed(TicketSystem.TicketSystemDBEntities context)
+        protected override void Seed(EntityFrameworkCodeFirst.StudentDB context)
         {
             //  This method will be called after migrating to the latest version.
 
