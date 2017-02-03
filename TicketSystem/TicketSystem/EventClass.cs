@@ -8,6 +8,6 @@ namespace TicketSystem
 {
     partial class Event
     {
-        public string EventNameAndDates { get { return EventName + " " + EventStartDate + " " + EventEndDate; } }
+        public string EventNameAndDates { get { return EventName + "\t" + EventStartDate.ToString("MM/dd/yyyy") + "-" + EventEndDate.ToString("MM/dd/yyyy"); } }
     }
 }

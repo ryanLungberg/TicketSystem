@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lstBoxEvents = new System.Windows.Forms.ListBox();
-            this.lstSelectCategory = new System.Windows.Forms.ListBox();
+            this.lstSelectGenres = new System.Windows.Forms.ListBox();
             this.txtSearchPerformer = new System.Windows.Forms.TextBox();
             this.txtSearchVenue = new System.Windows.Forms.TextBox();
             this.dtSearchDate = new System.Windows.Forms.DateTimePicker();
@@ -46,21 +46,21 @@
             this.lstBoxEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstBoxEvents.FormattingEnabled = true;
             this.lstBoxEvents.ItemHeight = 31;
-            this.lstBoxEvents.Location = new System.Drawing.Point(153, 162);
+            this.lstBoxEvents.Location = new System.Drawing.Point(43, 162);
             this.lstBoxEvents.Name = "lstBoxEvents";
-            this.lstBoxEvents.Size = new System.Drawing.Size(764, 996);
+            this.lstBoxEvents.Size = new System.Drawing.Size(968, 996);
             this.lstBoxEvents.TabIndex = 0;
             // 
-            // lstSelectCategory
+            // lstSelectGenres
             // 
-            this.lstSelectCategory.AllowDrop = true;
-            this.lstSelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstSelectCategory.FormattingEnabled = true;
-            this.lstSelectCategory.ItemHeight = 31;
-            this.lstSelectCategory.Location = new System.Drawing.Point(1093, 142);
-            this.lstSelectCategory.Name = "lstSelectCategory";
-            this.lstSelectCategory.Size = new System.Drawing.Size(383, 221);
-            this.lstSelectCategory.TabIndex = 1;
+            this.lstSelectGenres.AllowDrop = true;
+            this.lstSelectGenres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstSelectGenres.FormattingEnabled = true;
+            this.lstSelectGenres.ItemHeight = 31;
+            this.lstSelectGenres.Location = new System.Drawing.Point(1093, 142);
+            this.lstSelectGenres.Name = "lstSelectGenres";
+            this.lstSelectGenres.Size = new System.Drawing.Size(383, 221);
+            this.lstSelectGenres.TabIndex = 1;
             // 
             // txtSearchPerformer
             // 
@@ -146,6 +146,7 @@
             this.btnEventDetails.TabIndex = 10;
             this.btnEventDetails.Text = "Event Details";
             this.btnEventDetails.UseVisualStyleBackColor = true;
+            this.btnEventDetails.Click += new System.EventHandler(this.btnEventDetails_Click);
             // 
             // TicketSystem
             // 
@@ -162,7 +163,7 @@
             this.Controls.Add(this.dtSearchDate);
             this.Controls.Add(this.txtSearchVenue);
             this.Controls.Add(this.txtSearchPerformer);
-            this.Controls.Add(this.lstSelectCategory);
+            this.Controls.Add(this.lstSelectGenres);
             this.Controls.Add(this.lstBoxEvents);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TicketSystem";
@@ -176,7 +177,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstBoxEvents;
-        private System.Windows.Forms.ListBox lstSelectCategory;
+        private System.Windows.Forms.ListBox lstSelectGenres;
         private System.Windows.Forms.TextBox txtSearchPerformer;
         private System.Windows.Forms.TextBox txtSearchVenue;
         private System.Windows.Forms.DateTimePicker dtSearchDate;
