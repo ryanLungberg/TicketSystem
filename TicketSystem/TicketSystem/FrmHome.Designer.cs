@@ -39,6 +39,8 @@
             this.btnSearchDate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEventDetails = new System.Windows.Forms.Button();
+            this.txtSearchEventName = new System.Windows.Forms.TextBox();
+            this.btnSearchEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstBoxEvents
@@ -65,7 +67,7 @@
             // txtSearchPerformer
             // 
             this.txtSearchPerformer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchPerformer.Location = new System.Drawing.Point(1093, 434);
+            this.txtSearchPerformer.Location = new System.Drawing.Point(1093, 560);
             this.txtSearchPerformer.Name = "txtSearchPerformer";
             this.txtSearchPerformer.Size = new System.Drawing.Size(383, 38);
             this.txtSearchPerformer.TabIndex = 2;
@@ -74,7 +76,7 @@
             // txtSearchVenue
             // 
             this.txtSearchVenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchVenue.Location = new System.Drawing.Point(1093, 546);
+            this.txtSearchVenue.Location = new System.Drawing.Point(1093, 661);
             this.txtSearchVenue.Name = "txtSearchVenue";
             this.txtSearchVenue.Size = new System.Drawing.Size(383, 38);
             this.txtSearchVenue.TabIndex = 3;
@@ -83,7 +85,7 @@
             // dtSearchDate
             // 
             this.dtSearchDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtSearchDate.Location = new System.Drawing.Point(1093, 629);
+            this.dtSearchDate.Location = new System.Drawing.Point(1091, 753);
             this.dtSearchDate.Name = "dtSearchDate";
             this.dtSearchDate.Size = new System.Drawing.Size(383, 38);
             this.dtSearchDate.TabIndex = 4;
@@ -100,25 +102,27 @@
             // 
             // btnSearchPerformer
             // 
-            this.btnSearchPerformer.Location = new System.Drawing.Point(1543, 427);
+            this.btnSearchPerformer.Location = new System.Drawing.Point(1543, 554);
             this.btnSearchPerformer.Name = "btnSearchPerformer";
             this.btnSearchPerformer.Size = new System.Drawing.Size(171, 44);
             this.btnSearchPerformer.TabIndex = 6;
             this.btnSearchPerformer.Text = "Search";
             this.btnSearchPerformer.UseVisualStyleBackColor = true;
+            this.btnSearchPerformer.Click += new System.EventHandler(this.btnSearchPerformer_Click);
             // 
             // btnSearchVenue
             // 
-            this.btnSearchVenue.Location = new System.Drawing.Point(1543, 533);
+            this.btnSearchVenue.Location = new System.Drawing.Point(1543, 661);
             this.btnSearchVenue.Name = "btnSearchVenue";
             this.btnSearchVenue.Size = new System.Drawing.Size(171, 44);
             this.btnSearchVenue.TabIndex = 7;
             this.btnSearchVenue.Text = "Search";
             this.btnSearchVenue.UseVisualStyleBackColor = true;
+            this.btnSearchVenue.Click += new System.EventHandler(this.btnSearchVenue_Click);
             // 
             // btnSearchDate
             // 
-            this.btnSearchDate.Location = new System.Drawing.Point(1543, 629);
+            this.btnSearchDate.Location = new System.Drawing.Point(1543, 753);
             this.btnSearchDate.Name = "btnSearchDate";
             this.btnSearchDate.Size = new System.Drawing.Size(171, 44);
             this.btnSearchDate.TabIndex = 8;
@@ -140,7 +144,7 @@
             // btnEventDetails
             // 
             this.btnEventDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEventDetails.Location = new System.Drawing.Point(1093, 742);
+            this.btnEventDetails.Location = new System.Drawing.Point(1091, 848);
             this.btnEventDetails.Name = "btnEventDetails";
             this.btnEventDetails.Size = new System.Drawing.Size(623, 79);
             this.btnEventDetails.TabIndex = 10;
@@ -148,12 +152,33 @@
             this.btnEventDetails.UseVisualStyleBackColor = true;
             this.btnEventDetails.Click += new System.EventHandler(this.btnEventDetails_Click);
             // 
+            // txtSearchEventName
+            // 
+            this.txtSearchEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEventName.Location = new System.Drawing.Point(1089, 439);
+            this.txtSearchEventName.Name = "txtSearchEventName";
+            this.txtSearchEventName.Size = new System.Drawing.Size(385, 38);
+            this.txtSearchEventName.TabIndex = 11;
+            this.txtSearchEventName.Text = "Search by Event Name";
+            // 
+            // btnSearchEvent
+            // 
+            this.btnSearchEvent.Location = new System.Drawing.Point(1543, 430);
+            this.btnSearchEvent.Name = "btnSearchEvent";
+            this.btnSearchEvent.Size = new System.Drawing.Size(171, 40);
+            this.btnSearchEvent.TabIndex = 12;
+            this.btnSearchEvent.Text = "Search";
+            this.btnSearchEvent.UseVisualStyleBackColor = true;
+            this.btnSearchEvent.Click += new System.EventHandler(this.btnSearchEvent_Click);
+            // 
             // TicketSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1868, 1314);
+            this.Controls.Add(this.btnSearchEvent);
+            this.Controls.Add(this.txtSearchEventName);
             this.Controls.Add(this.btnEventDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearchDate);
@@ -187,6 +212,8 @@
         private System.Windows.Forms.Button btnSearchDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEventDetails;
+        private System.Windows.Forms.TextBox txtSearchEventName;
+        private System.Windows.Forms.Button btnSearchEvent;
     }
 }
 

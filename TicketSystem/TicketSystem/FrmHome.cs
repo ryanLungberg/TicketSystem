@@ -53,6 +53,83 @@ namespace TicketSystem
             lstSelectGenres.ValueMember = nameof(Genre.GenreID);
         }
 
+
+        private void btnSearchEvent_Click(object sender, EventArgs e)
+        {
+            PopulateByEventName();
+        }
+
+        /// <summary>
+        /// Populates event list box where data/text inside txtSearchEventName  
+        /// substring matches the EventName.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PopulateByEventName()
+        {
+            if (!String.IsNullOrWhiteSpace(txtSearchEventName.Text))
+            {
+                string eventSearch = txtSearchEventName.Text.Trim();
+                TicketSystemDBEntities db = new TicketSystemDBEntities();
+                List<Event> listOfEvents = db.Events.Where(e => e.EventName.Contains(eventSearch)).ToList();
+
+                lstBoxEvents.DataSource = listOfEvents;
+            }
+            else
+            {
+                MessageBox.Show("Enter a Event Name");
+            }
+        }
+
+        private void btnSearchPerformer_Click(object sender, EventArgs e)
+        {
+            PopulateByPerformer();
+        }
+        /// <summary>
+        /// Populates event list box where data/text inside performer textbox as 
+        /// substring matches the string name of Event.PerformerName. 
+        /// </summary>
+        private void PopulateByPerformer()
+        {
+            if (!String.IsNullOrWhiteSpace(txtSearchPerformer.Text)) {
+                string performerSearch = txtSearchPerformer.Text.Trim();
+                TicketSystemDBEntities db = new TicketSystemDBEntities();
+                List<Event> listOfEvents = db.Events.Where(e => e.Performer.PerformerName.Contains(performerSearch)).ToList();
+
+                lstBoxEvents.DataSource = listOfEvents;
+            }
+            else
+            {
+                MessageBox.Show("Enter a performer");
+            }
+        }
+
+        private void btnSearchVenue_Click(object sender, EventArgs e)
+        {
+            PopulateByVenue();
+        }
+
+        /// <summary>
+        /// Populates event list box where data/text inside Venue textbox as
+        /// substring matches the string name of the Event.VenueName. 
+        /// </summary>
+        private void PopulateByVenue()
+        {
+            if (!String.IsNullOrWhiteSpace(txtSearchVenue.Text))
+            {
+                string venueSearch = txtSearchVenue.Text.Trim();
+                TicketSystemDBEntities db = new TicketSystemDBEntities();
+                List<Event> listOfEvents = db.Events.Where(e => e.Venue.VenueName.Contains(venueSearch)).ToList();
+
+                lstBoxEvents.DataSource = listOfEvents;
+            }
+            else
+            {
+                MessageBox.Show("Enter a venue name");
+            }
+        }
+    
+
         /// <summary>
         /// Open Event details if an event is selected
         /// </summary>
@@ -71,5 +148,7 @@ namespace TicketSystem
                 MessageBox.Show("Please select an event.");
             }
         }
+
+        
     }
 }
