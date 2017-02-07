@@ -99,6 +99,7 @@
             this.btnSearchCategory.TabIndex = 5;
             this.btnSearchCategory.Text = "Search";
             this.btnSearchCategory.UseVisualStyleBackColor = false;
+            this.btnSearchCategory.Click += new System.EventHandler(this.btnSearchCategory_Click);
             // 
             // btnSearchPerformer
             // 
@@ -128,6 +129,7 @@
             this.btnSearchDate.TabIndex = 8;
             this.btnSearchDate.Text = "Search";
             this.btnSearchDate.UseVisualStyleBackColor = true;
+            this.btnSearchDate.Click += new System.EventHandler(this.btnSearchDate_Click);
             // 
             // label1
             // 

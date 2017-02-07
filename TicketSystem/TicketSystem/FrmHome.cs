@@ -53,7 +53,11 @@ namespace TicketSystem
             lstSelectGenres.ValueMember = nameof(Genre.GenreID);
         }
 
-
+        /// <summary>
+        /// calls method to populate list by event name.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSearchEvent_Click(object sender, EventArgs e)
         {
             PopulateByEventName();
@@ -85,6 +89,7 @@ namespace TicketSystem
         {
             PopulateByPerformer();
         }
+
         /// <summary>
         /// Populates event list box where data/text inside performer textbox as 
         /// substring matches the string name of Event.PerformerName. 
@@ -128,7 +133,52 @@ namespace TicketSystem
                 MessageBox.Show("Enter a venue name");
             }
         }
-    
+
+        /// <summary>
+        /// calls  method to populate list of events with genre that corresponds with
+        /// the selected genre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSearchCategory_Click(object sender, EventArgs e)
+        {
+            PopulateByGenre();
+        }
+
+        /// <summary>
+        /// if there is selected genre, this method populates the list of events with 
+        /// events that have a corresponding genreID.
+        /// </summary>
+        private void PopulateByGenre()
+        {
+            if(lstSelectGenres.SelectedIndex >= 0)
+            {
+
+                Genre g = (Genre)lstSelectGenres.SelectedItem;
+                TicketSystemDBEntities db = new TicketSystemDBEntities();
+                List<Event> listOfEvents = db.Events.Where(e => e.Genre.GenreID == g.GenreID).ToList();
+                lstBoxEvents.DataSource = listOfEvents;
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a genre");
+            }
+        }
+
+        private void btnSearchDate_Click(object sender, EventArgs e)
+        {
+            PopulateByDate();
+        }
+
+        private void PopulateByDate()
+        {
+            DateTime d = dtSearchDate.Value;
+
+            TicketSystemDBEntities db = new TicketSystemDBEntities();
+            List<Event> listOfEvents = db.Events.Where(e => d >= e.EventStartDate && d <= e.EventEndDate).ToList();
+            lstBoxEvents.DataSource = listOfEvents;
+        }
 
         /// <summary>
         /// Open Event details if an event is selected
