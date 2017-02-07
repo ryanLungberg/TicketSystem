@@ -173,7 +173,7 @@ namespace TicketSystem
 
         private void PopulateByDate()
         {
-            DateTime d = dtSearchDate.Value;
+            DateTime d = dtSearchDate.Value.Date;//make sure we ignore time for comparisons.
 
             TicketSystemDBEntities db = new TicketSystemDBEntities();
             List<Event> listOfEvents = db.Events.Where(e => d >= e.EventStartDate && d <= e.EventEndDate).ToList();
