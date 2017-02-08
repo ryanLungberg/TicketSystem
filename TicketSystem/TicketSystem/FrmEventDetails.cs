@@ -12,15 +12,22 @@ namespace TicketSystem
 {
     public partial class FrmEventDetails : Form
     {
+       
         public FrmEventDetails(Event e)
         {
             InitializeComponent();
             Event CurrentEvent = e;//This event will be passed in from THe events page.
+            AddListItem();
+        }
+
+        private void AddListItem()
+        {
+            ListBox
         }
 
         private void FrmEventDetails_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

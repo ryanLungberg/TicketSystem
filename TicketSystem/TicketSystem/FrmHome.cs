@@ -20,7 +20,7 @@ namespace TicketSystem
 
         private void TicketSystem_Load(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1000, 700);
+            this.Size = new Size(1000, 700);
             
             //To Do: CHANge this to upcoming events
             populateListBoxWithAllEvents(); //initial populate Events listbox with all events
