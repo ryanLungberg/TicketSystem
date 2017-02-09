@@ -22,7 +22,7 @@ namespace TicketSystem
         {
             this.Size = new Size(1000, 700);
             
-            //To Do: CHANge this to upcoming events
+            //ToDo: CHANge this to upcoming events
             populateListBoxWithAllEvents(); //initial populate Events listbox with all events
             PopulateGenres();               // initial Populate genres listbox
         }

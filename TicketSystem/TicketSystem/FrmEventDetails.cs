@@ -22,7 +22,7 @@ namespace TicketSystem
 
         private void AddListItem()
         {
-            ListBox
+            //TODO
         }
 
         private void FrmEventDetails_Load(object sender, EventArgs e)
