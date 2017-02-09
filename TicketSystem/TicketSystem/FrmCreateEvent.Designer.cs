@@ -32,9 +32,10 @@
             // 
             // FrmCreateEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 670);
+            this.ClientSize = new System.Drawing.Size(770, 587);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCreateEvent";
             this.Text = "FrmCreateEvent";
             this.ResumeLayout(false);
