@@ -43,9 +43,9 @@
             // 
             // txtEvent
             // 
-            this.txtEvent.Location = new System.Drawing.Point(70, 102);
+            this.txtEvent.Location = new System.Drawing.Point(122, 89);
             this.txtEvent.Name = "txtEvent";
-            this.txtEvent.Size = new System.Drawing.Size(216, 20);
+            this.txtEvent.Size = new System.Drawing.Size(335, 20);
             this.txtEvent.TabIndex = 1;
             // 
             // label1
