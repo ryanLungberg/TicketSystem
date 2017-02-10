@@ -13,6 +13,7 @@ namespace TicketSystem
 {
     public partial class TicketSystem : Form
     {
+        
         public TicketSystem()
         {
             InitializeComponent();

@@ -31,6 +31,13 @@
             this.txtDetail = new System.Windows.Forms.TextBox();
             this.txtEvent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtLocation = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnReturnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDetail
@@ -45,8 +52,9 @@
             // 
             this.txtEvent.Location = new System.Drawing.Point(122, 89);
             this.txtEvent.Name = "txtEvent";
-            this.txtEvent.Size = new System.Drawing.Size(335, 20);
+            this.txtEvent.Size = new System.Drawing.Size(396, 20);
             this.txtEvent.TabIndex = 1;
+            this.txtEvent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -58,11 +66,76 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Event Details";
             // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(335, 290);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(308, 20);
+            this.txtDate.TabIndex = 3;
+            // 
+            // txtLocation
+            // 
+            this.txtLocation.Location = new System.Drawing.Point(335, 185);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(291, 20);
+            this.txtLocation.TabIndex = 5;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(335, 410);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(308, 20);
+            this.txtPrice.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(343, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Location";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(343, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Event Dates";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(343, 394);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Event Price Range";
+            // 
+            // btnReturnHome
+            // 
+            this.btnReturnHome.Location = new System.Drawing.Point(218, 469);
+            this.btnReturnHome.Name = "btnReturnHome";
+            this.btnReturnHome.Size = new System.Drawing.Size(191, 47);
+            this.btnReturnHome.TabIndex = 10;
+            this.btnReturnHome.Text = "Return To Home Page";
+            this.btnReturnHome.UseVisualStyleBackColor = true;
+            this.btnReturnHome.Click += new System.EventHandler(this.btnReturnHome_Click);
+            // 
             // FrmEventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 475);
+            this.ClientSize = new System.Drawing.Size(655, 555);
+            this.Controls.Add(this.btnReturnHome);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtLocation);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEvent);
             this.Controls.Add(this.txtDetail);
@@ -80,5 +153,12 @@
         private System.Windows.Forms.TextBox txtDetail;
         private System.Windows.Forms.TextBox txtEvent;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.TextBox txtLocation;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnReturnHome;
     }
 }

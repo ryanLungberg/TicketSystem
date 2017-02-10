@@ -12,22 +12,38 @@ namespace TicketSystem
 {
     public partial class FrmEventDetails : Form
     {
-        Event e = new Event();
+        Event eventInformation = new Event();
+        
         public FrmEventDetails(Event e)
         {
             InitializeComponent();
-            this.e = e;//This event will be passed in from THe events page.
+            this.eventInformation = e;//This event will be passed in from THe events page.
             AddListItem();
+            
         }
-
+        /// <summary>
+        /// Add and display information from selected item on homescreen
+        /// </summary>
         private void AddListItem()
         {
-            txtDetail.Text = e.EventInfo;
+            txtDetail.Text = eventInformation.EventInfo;
+            //TODO: Need to remove time stamp at end of Dates
+            txtDate.Text = (eventInformation.EventStartDate.ToString() + " - " + eventInformation.EventEndDate.ToString()); 
+            txtEvent.Text = eventInformation.EventName;
+            // TODO: Ran into some trouble with this one.  We need to Pass Venue over as well. Not just event it seems.  We need to look into this
+            txtLocation.Text = eventInformation.Venue.ToString(); 
+            txtPrice.Text = eventInformation.EventPriceRange;
+            
         }
 
         private void FrmEventDetails_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnReturnHome_Click(object sender, EventArgs e)
+        {
+           // TODO: Create a back button
         }
     }
 }
