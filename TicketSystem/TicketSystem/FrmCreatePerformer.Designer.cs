@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // CreatePerformer
+            // FrmCreatePerformer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 634);
-            this.Name = "CreatePerformer";
+            this.ClientSize = new System.Drawing.Size(1868, 1188);
+            this.Name = "FrmCreatePerformer";
             this.Text = "CreatePerformer";
             this.ResumeLayout(false);
 

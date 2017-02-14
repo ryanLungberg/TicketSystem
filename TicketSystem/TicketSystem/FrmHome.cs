@@ -192,7 +192,7 @@ namespace TicketSystem
             {
                 //pass Selected event to Frm Event details
                 Form FrmEventDetails = new FrmEventDetails((Event)lstBoxEvents.SelectedItem);
-                FrmEventDetails.Show();
+                ((FrmParent)this.MdiParent).ChangeChildForm(FrmEventDetails);//Access Parent Form and change active form
             }
             else
             {

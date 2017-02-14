@@ -1,6 +1,6 @@
 ﻿namespace TicketSystem
 {
-    partial class FrmCreateEvent
+    partial class FrmCreateVenue
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FrmCreateEvent
+            // FrmCreateVenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1868, 1188);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FrmCreateEvent";
-            this.Text = "FrmCreateEvent";
+            this.Name = "FrmCreateVenue";
+            this.Text = "FrmCreateVenue";
             this.ResumeLayout(false);
 
         }

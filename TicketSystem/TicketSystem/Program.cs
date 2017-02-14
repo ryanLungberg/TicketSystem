@@ -16,7 +16,7 @@ namespace TicketSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TicketSystem());
+            Application.Run(new FrmParent());
         }
     }
 }

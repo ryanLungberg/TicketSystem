@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TicketSystem.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -79,6 +82,12 @@
     <Compile Include="FrmCreateEvent.Designer.cs">
       <DependentUpon>FrmCreateEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateVenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateVenue.Designer.cs">
+      <DependentUpon>FrmCreateVenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEventDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +132,17 @@
     <Compile Include="Venue.cs">
       <DependentUpon>TicketSystemModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmCreateCategory.resx">
+      <DependentUpon>FrmCreateCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCreatePerformer.resx">
       <DependentUpon>FrmCreatePerformer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateEvent.resx">
       <DependentUpon>FrmCreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateVenue.resx">
+      <DependentUpon>FrmCreateVenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEventDetails.resx">
       <DependentUpon>FrmEventDetails.cs</DependentUpon>
