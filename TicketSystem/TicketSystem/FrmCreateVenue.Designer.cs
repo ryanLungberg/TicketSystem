@@ -32,11 +32,14 @@
             // 
             // FrmCreateVenue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1868, 1188);
+            this.ClientSize = new System.Drawing.Size(934, 552);
+            this.ControlBox = false;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCreateVenue";
-            this.Text = "FrmCreateVenue";
+            this.Text = "Create A Venue";
+            this.Load += new System.EventHandler(this.FrmCreateVenue_Load);
             this.ResumeLayout(false);
 
         }

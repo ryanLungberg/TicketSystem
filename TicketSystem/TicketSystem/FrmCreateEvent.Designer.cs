@@ -32,12 +32,14 @@
             // 
             // FrmCreateEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1868, 1188);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(934, 552);
+            this.ControlBox = false;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCreateEvent";
-            this.Text = "FrmCreateEvent";
+            this.Text = "Create An Event";
+            this.Load += new System.EventHandler(this.FrmCreateEvent_Load);
             this.ResumeLayout(false);
 
         }

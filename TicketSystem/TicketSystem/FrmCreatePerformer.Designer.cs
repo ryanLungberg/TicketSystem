@@ -32,11 +32,14 @@
             // 
             // FrmCreatePerformer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1868, 1188);
+            this.ClientSize = new System.Drawing.Size(934, 552);
+            this.ControlBox = false;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCreatePerformer";
-            this.Text = "CreatePerformer";
+            this.Text = "Create A Performer";
+            this.Load += new System.EventHandler(this.FrmCreatePerformer_Load);
             this.ResumeLayout(false);
 
         }

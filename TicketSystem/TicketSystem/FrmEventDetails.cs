@@ -19,7 +19,9 @@ namespace TicketSystem
             InitializeComponent();
             this.eventInformation = e;//This event will be passed in from THe events page.
             AddListItem();
-            
+            this.Text = Text + " " + eventInformation.EventName; // Display the event in heading.
+
+
         }
         /// <summary>
         /// Add and display information from selected item on homescreen
@@ -38,7 +40,8 @@ namespace TicketSystem
 
         private void FrmEventDetails_Load(object sender, EventArgs e)
         {
-           
+            this.Dock = DockStyle.Fill;
+            
         }
 
         private void btnReturnHome_Click(object sender, EventArgs e)

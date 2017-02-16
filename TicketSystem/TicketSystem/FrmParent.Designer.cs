@@ -47,22 +47,22 @@
             this.btnMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1974, 46);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1151, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 38);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
             // btnMenu
             // 
             this.btnMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createEventToolStripMenuItem});
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(90, 38);
+            this.btnMenu.Size = new System.Drawing.Size(50, 20);
             this.btnMenu.Text = "Menu";
             // 
             // createEventToolStripMenuItem
@@ -73,50 +73,50 @@
             this.BtnCreatePerformer,
             this.BtnCreateVenue});
             this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
-            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.createEventToolStripMenuItem.Text = "Create";
             // 
             // BtnCreateEvent
             // 
             this.BtnCreateEvent.Name = "BtnCreateEvent";
-            this.BtnCreateEvent.Size = new System.Drawing.Size(269, 38);
+            this.BtnCreateEvent.Size = new System.Drawing.Size(127, 22);
             this.BtnCreateEvent.Text = "Event";
             this.BtnCreateEvent.Click += new System.EventHandler(this.BtnCreateEvent_Click);
             // 
             // BtnCreateCategory
             // 
             this.BtnCreateCategory.Name = "BtnCreateCategory";
-            this.BtnCreateCategory.Size = new System.Drawing.Size(269, 38);
+            this.BtnCreateCategory.Size = new System.Drawing.Size(127, 22);
             this.BtnCreateCategory.Text = "Category";
             this.BtnCreateCategory.Click += new System.EventHandler(this.BtnCreateCategory_Click);
             // 
             // BtnCreatePerformer
             // 
             this.BtnCreatePerformer.Name = "BtnCreatePerformer";
-            this.BtnCreatePerformer.Size = new System.Drawing.Size(269, 38);
+            this.BtnCreatePerformer.Size = new System.Drawing.Size(127, 22);
             this.BtnCreatePerformer.Text = "Performer";
             this.BtnCreatePerformer.Click += new System.EventHandler(this.BtnCreatePerformer_Click);
             // 
             // BtnCreateVenue
             // 
             this.BtnCreateVenue.Name = "BtnCreateVenue";
-            this.BtnCreateVenue.Size = new System.Drawing.Size(269, 38);
+            this.BtnCreateVenue.Size = new System.Drawing.Size(127, 22);
             this.BtnCreateVenue.Text = "Venue";
             this.BtnCreateVenue.Click += new System.EventHandler(this.BtnCreateVenue_Click);
             // 
             // FrmParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(1974, 1329);
+            this.ClientSize = new System.Drawing.Size(1151, 594);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Moire", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.MaximumSize = new System.Drawing.Size(2000, 1400);
-            this.MinimumSize = new System.Drawing.Size(2000, 1400);
+            this.MaximumSize = new System.Drawing.Size(1174, 800);
+            this.MinimumSize = new System.Drawing.Size(1125, 598);
             this.Name = "FrmParent";
-            this.Text = "FrmParent";
+            this.Text = "Derick and Dennis\'s Super Slick Ticket System ";
             this.Load += new System.EventHandler(this.FrmParent_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

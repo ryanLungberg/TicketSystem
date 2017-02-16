@@ -47,11 +47,11 @@
             // 
             this.lstBoxEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstBoxEvents.FormattingEnabled = true;
-            this.lstBoxEvents.ItemHeight = 31;
-            this.lstBoxEvents.Location = new System.Drawing.Point(44, 162);
-            this.lstBoxEvents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstBoxEvents.ItemHeight = 16;
+            this.lstBoxEvents.Location = new System.Drawing.Point(22, 84);
+            this.lstBoxEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstBoxEvents.Name = "lstBoxEvents";
-            this.lstBoxEvents.Size = new System.Drawing.Size(968, 965);
+            this.lstBoxEvents.Size = new System.Drawing.Size(486, 500);
             this.lstBoxEvents.TabIndex = 0;
             // 
             // lstSelectGenres
@@ -59,49 +59,49 @@
             this.lstSelectGenres.AllowDrop = true;
             this.lstSelectGenres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstSelectGenres.FormattingEnabled = true;
-            this.lstSelectGenres.ItemHeight = 31;
-            this.lstSelectGenres.Location = new System.Drawing.Point(1092, 142);
-            this.lstSelectGenres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstSelectGenres.ItemHeight = 16;
+            this.lstSelectGenres.Location = new System.Drawing.Point(546, 74);
+            this.lstSelectGenres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstSelectGenres.Name = "lstSelectGenres";
-            this.lstSelectGenres.Size = new System.Drawing.Size(384, 190);
+            this.lstSelectGenres.Size = new System.Drawing.Size(194, 100);
             this.lstSelectGenres.TabIndex = 1;
             // 
             // txtSearchPerformer
             // 
             this.txtSearchPerformer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchPerformer.Location = new System.Drawing.Point(1092, 560);
-            this.txtSearchPerformer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchPerformer.Location = new System.Drawing.Point(546, 291);
+            this.txtSearchPerformer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearchPerformer.Name = "txtSearchPerformer";
-            this.txtSearchPerformer.Size = new System.Drawing.Size(384, 38);
+            this.txtSearchPerformer.Size = new System.Drawing.Size(194, 23);
             this.txtSearchPerformer.TabIndex = 2;
             this.txtSearchPerformer.Text = "Search by performer";
             // 
             // txtSearchVenue
             // 
             this.txtSearchVenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchVenue.Location = new System.Drawing.Point(1092, 662);
-            this.txtSearchVenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchVenue.Location = new System.Drawing.Point(546, 344);
+            this.txtSearchVenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearchVenue.Name = "txtSearchVenue";
-            this.txtSearchVenue.Size = new System.Drawing.Size(384, 38);
+            this.txtSearchVenue.Size = new System.Drawing.Size(194, 23);
             this.txtSearchVenue.TabIndex = 3;
             this.txtSearchVenue.Text = "Search by venue";
             // 
             // dtSearchDate
             // 
             this.dtSearchDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtSearchDate.Location = new System.Drawing.Point(1088, 754);
-            this.dtSearchDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtSearchDate.Location = new System.Drawing.Point(544, 392);
+            this.dtSearchDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtSearchDate.Name = "dtSearchDate";
-            this.dtSearchDate.Size = new System.Drawing.Size(388, 32);
+            this.dtSearchDate.Size = new System.Drawing.Size(196, 20);
             this.dtSearchDate.TabIndex = 4;
             // 
             // btnSearchCategory
             // 
             this.btnSearchCategory.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearchCategory.Location = new System.Drawing.Point(1544, 142);
-            this.btnSearchCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchCategory.Location = new System.Drawing.Point(772, 74);
+            this.btnSearchCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchCategory.Name = "btnSearchCategory";
-            this.btnSearchCategory.Size = new System.Drawing.Size(172, 44);
+            this.btnSearchCategory.Size = new System.Drawing.Size(86, 23);
             this.btnSearchCategory.TabIndex = 5;
             this.btnSearchCategory.Text = "Search";
             this.btnSearchCategory.UseVisualStyleBackColor = false;
@@ -109,10 +109,10 @@
             // 
             // btnSearchPerformer
             // 
-            this.btnSearchPerformer.Location = new System.Drawing.Point(1544, 554);
-            this.btnSearchPerformer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchPerformer.Location = new System.Drawing.Point(772, 288);
+            this.btnSearchPerformer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchPerformer.Name = "btnSearchPerformer";
-            this.btnSearchPerformer.Size = new System.Drawing.Size(172, 44);
+            this.btnSearchPerformer.Size = new System.Drawing.Size(86, 23);
             this.btnSearchPerformer.TabIndex = 6;
             this.btnSearchPerformer.Text = "Search";
             this.btnSearchPerformer.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             // 
             // btnSearchVenue
             // 
-            this.btnSearchVenue.Location = new System.Drawing.Point(1544, 662);
-            this.btnSearchVenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchVenue.Location = new System.Drawing.Point(772, 344);
+            this.btnSearchVenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchVenue.Name = "btnSearchVenue";
-            this.btnSearchVenue.Size = new System.Drawing.Size(172, 44);
+            this.btnSearchVenue.Size = new System.Drawing.Size(86, 23);
             this.btnSearchVenue.TabIndex = 7;
             this.btnSearchVenue.Text = "Search";
             this.btnSearchVenue.UseVisualStyleBackColor = true;
@@ -131,10 +131,10 @@
             // 
             // btnSearchDate
             // 
-            this.btnSearchDate.Location = new System.Drawing.Point(1544, 754);
-            this.btnSearchDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchDate.Location = new System.Drawing.Point(772, 392);
+            this.btnSearchDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchDate.Name = "btnSearchDate";
-            this.btnSearchDate.Size = new System.Drawing.Size(172, 44);
+            this.btnSearchDate.Size = new System.Drawing.Size(86, 23);
             this.btnSearchDate.TabIndex = 8;
             this.btnSearchDate.Text = "Search";
             this.btnSearchDate.UseVisualStyleBackColor = true;
@@ -146,10 +146,10 @@
             this.label1.Font = new System.Drawing.Font("Courier New", 25.125F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(292, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(146, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 77);
+            this.label1.Size = new System.Drawing.Size(257, 38);
             this.label1.TabIndex = 9;
             this.label1.Text = "Event Search";
             // 
@@ -157,10 +157,10 @@
             // 
             this.btnEventDetails.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.btnEventDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEventDetails.Location = new System.Drawing.Point(1092, 848);
-            this.btnEventDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEventDetails.Location = new System.Drawing.Point(546, 441);
+            this.btnEventDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEventDetails.Name = "btnEventDetails";
-            this.btnEventDetails.Size = new System.Drawing.Size(624, 79);
+            this.btnEventDetails.Size = new System.Drawing.Size(312, 41);
             this.btnEventDetails.TabIndex = 10;
             this.btnEventDetails.Text = "Event Details";
             this.btnEventDetails.UseVisualStyleBackColor = true;
@@ -169,19 +169,19 @@
             // txtSearchEventName
             // 
             this.txtSearchEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchEventName.Location = new System.Drawing.Point(1088, 438);
-            this.txtSearchEventName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchEventName.Location = new System.Drawing.Point(544, 228);
+            this.txtSearchEventName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearchEventName.Name = "txtSearchEventName";
-            this.txtSearchEventName.Size = new System.Drawing.Size(384, 38);
+            this.txtSearchEventName.Size = new System.Drawing.Size(194, 23);
             this.txtSearchEventName.TabIndex = 11;
             this.txtSearchEventName.Text = "Search by Event Name";
             // 
             // btnSearchEvent
             // 
-            this.btnSearchEvent.Location = new System.Drawing.Point(1544, 431);
-            this.btnSearchEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchEvent.Location = new System.Drawing.Point(772, 224);
+            this.btnSearchEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchEvent.Name = "btnSearchEvent";
-            this.btnSearchEvent.Size = new System.Drawing.Size(172, 40);
+            this.btnSearchEvent.Size = new System.Drawing.Size(86, 21);
             this.btnSearchEvent.TabIndex = 12;
             this.btnSearchEvent.Text = "Search";
             this.btnSearchEvent.UseVisualStyleBackColor = true;
@@ -189,10 +189,10 @@
             // 
             // TicketSystem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1868, 1188);
+            this.ClientSize = new System.Drawing.Size(934, 552);
             this.ControlBox = false;
             this.Controls.Add(this.btnSearchEvent);
             this.Controls.Add(this.txtSearchEventName);
@@ -207,9 +207,8 @@
             this.Controls.Add(this.txtSearchPerformer);
             this.Controls.Add(this.lstSelectGenres);
             this.Controls.Add(this.lstBoxEvents);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "TicketSystem";
-            this.Text = "TicketSystem";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.TicketSystem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

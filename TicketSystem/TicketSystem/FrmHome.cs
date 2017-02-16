@@ -22,6 +22,7 @@ namespace TicketSystem
         private void TicketSystem_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1000, 700);
+            this.Dock = DockStyle.Fill;
             
             //ToDo: CHANge this to upcoming events
             populateListBoxWithAllEvents(); //initial populate Events listbox with all events

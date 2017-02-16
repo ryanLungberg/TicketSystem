@@ -16,5 +16,10 @@ namespace TicketSystem
         {
             InitializeComponent();
         }
+
+        private void FrmCreateEvent_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
     }
 }
