@@ -15,7 +15,7 @@ namespace TicketSystem
         public FrmParent()
         {
             InitializeComponent();
-            
+
         }
 
         //This is The Active ChildForm of The Parent Form that contains the Menu strip.
@@ -30,7 +30,7 @@ namespace TicketSystem
             this.IsMdiContainer = true;
             Form f = new TicketSystem();
             ChangeChildForm(f);
-            
+
         }
         /// <summary>
         /// This method is called to activate a child form after its been changed.
@@ -54,9 +54,9 @@ namespace TicketSystem
             {
                 ChildForm.Close(); //Close last open Form
             }
-                ChildForm = F;      //Assign new Form
-                ActivateNewChildForm(); //Display new form.
-            
+            ChildForm = F;      //Assign new Form
+            ActivateNewChildForm(); //Display new form.
+
 
         }
 
@@ -107,6 +107,12 @@ namespace TicketSystem
         {
             FrmCreateVenue newCreateVenueForm = new FrmCreateVenue();
             ChangeChildForm(newCreateVenueForm);
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TicketSystem newHomePage = new TicketSystem();
+            ChangeChildForm(newHomePage);
         }
     }
 }
