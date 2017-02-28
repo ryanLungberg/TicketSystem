@@ -24,7 +24,7 @@ namespace TicketSystem
         private void FrmParent_Load(object sender, EventArgs e)
         {
             //set initial size of parent Form
-            this.Size = new System.Drawing.Size(1925, 1400);
+            this.Size = new System.Drawing.Size(1900, 1400);
 
             //Create initialForm
             this.IsMdiContainer = true;
