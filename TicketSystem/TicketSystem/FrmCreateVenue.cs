@@ -25,31 +25,28 @@ namespace TicketSystem
         /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Venue v = new Venue();
 
-            v.VenueName = txtName.Text;
-            v.VenueType = txtType.Text;
-            v.VenueAddress = txtAddress.Text;
-            v.VenueCity = txtCity.Text;
-            v.VenueInfo = txtInfo.Text;
-            v.VenueState = txtState.Text;
-            v.VenueURL = txtURL.Text;
-
-            db.Venues.Add(v);
-
-            int insert = db.SaveChanges();
-            if (insert > 0)
+            if (IsValidData())
             {
-                MessageBox.Show("Venue Submitted Correctly");
-                
-                
+                Venue v = new Venue();
+
+                v.VenueName = txtName.Text;
+                v.VenueType = txtType.Text;
+                v.VenueAddress = txtAddress.Text;
+                v.VenueCity = txtCity.Text;
+                v.VenueInfo = txtInfo.Text;
+                v.VenueState = txtState.Text;
+                v.VenueURL = txtURL.Text;
+
+                db.Venues.Add(v);
+                MessageBox.Show("Your Venue has been added", "congratulations");
+                ClearData();
             }
             else
             {
-                MessageBox.Show("Try Again!!!");
+                MessageBox.Show("You did not enter things in correctly", "Try again");
             }
-            
-            
+        
         }
 
 
@@ -60,6 +57,33 @@ namespace TicketSystem
         /// <param name="e"></param>
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ClearData();
+        }
+
+        private void FrmCreateVenue_Load(object sender, EventArgs e)
+        {
+            Dock = DockStyle.Fill;
+        }
+        /// <summary>
+        /// Will check to see if the tables that can not be null have something inserted into them
+        /// </summary>
+        /// <returns></returns>
+        private bool IsValidData()
+        {
+            if (!String.IsNullOrWhiteSpace(txtName.Text) && !String.IsNullOrWhiteSpace(txtAddress.Text) && !String.IsNullOrWhiteSpace(txtCity.Text) && !String.IsNullOrWhiteSpace(txtState.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// Will Clear data
+        /// </summary>
+        private void ClearData()
+        {
             foreach (Control c in Controls)
             {
                 if (c is TextBox)
@@ -67,11 +91,6 @@ namespace TicketSystem
                     c.Text = "";
                 }
             }
-        }
-
-        private void FrmCreateVenue_Load(object sender, EventArgs e)
-        {
-            Dock = DockStyle.Fill;
         }
     }
 }
