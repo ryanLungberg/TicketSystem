@@ -114,6 +114,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TicketSystemDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketSystemDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TicketSystemModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,6 +181,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TicketSystemModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="TicketSystemDBDataSet.xsc">
+      <DependentUpon>TicketSystemDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TicketSystemDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TicketSystemDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketSystemDBDataSet.xss">
+      <DependentUpon>TicketSystemDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TicketSystemModel.edmx.diagram">
       <DependentUpon>TicketSystemModel.edmx</DependentUpon>
     </None>
