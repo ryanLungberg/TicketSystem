@@ -6,7 +6,7 @@
     This is a desktop application where you can search events and see their details, create events, create new performers, create genres,
     create venues with the future ambition to edit everything that is saved to the database.
     
-    We built the database first and added it to the application using entity and resentitive of the EF DESIGNER FROM DATABASE. 
+    We built the database first and added it to the application using entity and representitive of the EF DESIGNER FROM DATABASE. 
 
 	**The project is on github with link(https://github.com/dbasargin/TicketSystem).**
  
