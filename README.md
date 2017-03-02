@@ -31,7 +31,7 @@
     * create Venue Form - allows user to create new venues.
     
 ## Unfinished work we expect the program to do.
-    -Forms to edit Event, Category, Performer and Venue.
+    - We want to create Forms to edit Event, Category, Performer and Venue.
     - publish application.
     
 ## Coding Conventions.
