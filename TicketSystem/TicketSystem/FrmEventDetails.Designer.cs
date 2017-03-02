@@ -122,7 +122,7 @@
             this.btnReturnHome.TabIndex = 10;
             this.btnReturnHome.Text = "Return To Home Page";
             this.btnReturnHome.UseVisualStyleBackColor = true;
-            this.btnReturnHome.Click += new System.EventHandler(this.btnReturnHome_Click);
+
             // 
             // FrmEventDetails
             // 

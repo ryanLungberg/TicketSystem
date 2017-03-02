@@ -54,6 +54,11 @@ namespace TicketSystem
             cboPerformer.ValueMember = nameof(Performer.PerformerID);
         }
 
+        /// <summary>
+        /// Once button is selected, check to see if valid data then adds new event to database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (IsValidData())
@@ -66,21 +71,27 @@ namespace TicketSystem
                 ev.EventStartDate = dtpStartDate.Value;
                 ev.EventEndDate = dtpEndDate.Value;
                 ev.VenueID = ((Venue)cboVenue.SelectedItem).VenueID;
-                ev.GenreID = cboGenre.SelectedIndex;
-                ev.PerformerID = cboPerformer.SelectedIndex;
+                ev.GenreID = ((Genre)cboGenre.SelectedItem).GenreID;
+                ev.PerformerID = ((Performer)cboPerformer.SelectedItem).PerformerID;
+                //ev.GenreID = cboGenre.SelectedIndex;
+                //ev.PerformerID = cboPerformer.SelectedIndex;
+
+                //TicketSystemDBEntities db = new TicketSystemDBEntities();
 
                 db.Events.Add(ev);
-                int pass = db.SaveChanges();
-                if (pass > 0)
+                int addEventToDatabase = db.SaveChanges();
+
+                if (addEventToDatabase > 0)
                 {
                     MessageBox.Show("You have just created a new event", "Yay!!!!");
                 }
+                else
+                {
+                    MessageBox.Show("You did not enter things in correctly", "Try again");
+                }
 
             }
-            else
-            {
-                MessageBox.Show("You did not enter things in correctly", "Try again");
-            }
+
 
         }
 

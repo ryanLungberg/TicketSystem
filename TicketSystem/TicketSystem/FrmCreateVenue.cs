@@ -16,6 +16,7 @@ namespace TicketSystem
         {
             InitializeComponent();
         }
+
         TicketSystemDBEntities db = new TicketSystemDBEntities();
 
         /// <summary>
@@ -39,14 +40,22 @@ namespace TicketSystem
                 v.VenueURL = txtURL.Text;
 
                 db.Venues.Add(v);
-                MessageBox.Show("Your Venue has been added", "congratulations");
-                ClearData();
+                int addVenueToDatabase = db.SaveChanges();
+
+                if(addVenueToDatabase > 0)
+                {
+                    MessageBox.Show("Your Venue has been added", "congratulations");
+                    ClearData();
+                }
+                else
+                {
+                    MessageBox.Show("You did not enter things in correctly", "Try again");
+                }
+
+                
             }
-            else
-            {
-                MessageBox.Show("You did not enter things in correctly", "Try again");
-            }
-        
+               
+
         }
 
 
