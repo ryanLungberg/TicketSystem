@@ -53,7 +53,7 @@
             // cboGenre
             // 
             this.cboGenre.FormattingEnabled = true;
-            this.cboGenre.Location = new System.Drawing.Point(273, 357);
+            this.cboGenre.Location = new System.Drawing.Point(273, 367);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(272, 21);
             this.cboGenre.TabIndex = 0;
@@ -61,7 +61,7 @@
             // cboVenue
             // 
             this.cboVenue.FormattingEnabled = true;
-            this.cboVenue.Location = new System.Drawing.Point(273, 407);
+            this.cboVenue.Location = new System.Drawing.Point(273, 411);
             this.cboVenue.Name = "cboVenue";
             this.cboVenue.Size = new System.Drawing.Size(272, 21);
             this.cboVenue.TabIndex = 1;
@@ -69,13 +69,14 @@
             // cboPerformer
             // 
             this.cboPerformer.FormattingEnabled = true;
-            this.cboPerformer.Location = new System.Drawing.Point(273, 457);
+            this.cboPerformer.Location = new System.Drawing.Point(273, 455);
             this.cboPerformer.Name = "cboPerformer";
             this.cboPerformer.Size = new System.Drawing.Size(272, 21);
             this.cboPerformer.TabIndex = 2;
             // 
             // txtName
             // 
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Location = new System.Drawing.Point(273, 63);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(272, 20);
@@ -83,24 +84,24 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(273, 210);
+            this.txtPrice.Location = new System.Drawing.Point(273, 192);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(272, 20);
             this.txtPrice.TabIndex = 6;
             // 
             // txtPromoter
             // 
-            this.txtPromoter.Location = new System.Drawing.Point(273, 259);
+            this.txtPromoter.Location = new System.Drawing.Point(273, 235);
             this.txtPromoter.Name = "txtPromoter";
             this.txtPromoter.Size = new System.Drawing.Size(272, 20);
             this.txtPromoter.TabIndex = 7;
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(273, 308);
+            this.txtInfo.Location = new System.Drawing.Point(273, 278);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
-            this.txtInfo.Size = new System.Drawing.Size(272, 20);
+            this.txtInfo.Size = new System.Drawing.Size(272, 66);
             this.txtInfo.TabIndex = 8;
             // 
             // label1
@@ -115,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 259);
+            this.label2.Location = new System.Drawing.Point(174, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 10;
@@ -124,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(179, 210);
+            this.label3.Location = new System.Drawing.Point(179, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 11;
@@ -133,7 +134,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(168, 161);
+            this.label4.Location = new System.Drawing.Point(169, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 12;
@@ -160,7 +161,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(185, 365);
+            this.label7.Location = new System.Drawing.Point(185, 367);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 15;
@@ -169,7 +170,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(185, 407);
+            this.label8.Location = new System.Drawing.Point(185, 411);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 16;
@@ -187,31 +188,33 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(388, 22);
+            this.label10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10.Font = new System.Drawing.Font("DFKai-SB", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(381, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(207, 32);
             this.label10.TabIndex = 18;
-            this.label10.Text = "label10";
+            this.label10.Text = "Create Event";
             // 
             // dtpStartDate
             // 
-            this.dtpStartDate.Location = new System.Drawing.Point(273, 112);
+            this.dtpStartDate.Location = new System.Drawing.Point(273, 106);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(272, 20);
             this.dtpStartDate.TabIndex = 19;
             // 
             // dtpEndDate
             // 
-            this.dtpEndDate.Location = new System.Drawing.Point(273, 161);
+            this.dtpEndDate.Location = new System.Drawing.Point(273, 149);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(272, 20);
             this.dtpEndDate.TabIndex = 20;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(707, 161);
+            this.btnSubmit.Location = new System.Drawing.Point(662, 234);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(75, 69);
             this.btnSubmit.TabIndex = 21;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -221,6 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(934, 552);
             this.ControlBox = false;
             this.Controls.Add(this.btnSubmit);

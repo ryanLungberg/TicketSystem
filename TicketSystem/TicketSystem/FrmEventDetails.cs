@@ -13,12 +13,12 @@ namespace TicketSystem
     public partial class FrmEventDetails : Form
     {
         Event eventInformation = new Event();
-       
+
         public FrmEventDetails(Event e)
         {
             InitializeComponent();
             this.eventInformation = e;//This event will be passed in from THe events page.
-            
+
             AddListItem();
             this.Text = Text + " " + eventInformation.EventName; // Display the event in heading.
 
@@ -31,8 +31,7 @@ namespace TicketSystem
         {
 
             txtDetail.Text = eventInformation.EventInfo;
-            //TODO: Need to remove time stamp at end of Dates
-            txtDate.Text = (eventInformation.EventStartDate.ToString() + " - " + eventInformation.EventEndDate.ToString());
+            txtDate.Text = eventInformation.EventStartDate.ToString("dd MMMM, yyyy") + " - " + eventInformation.EventEndDate.ToString("dd MMMM, yyyy");
             txtEvent.Text = eventInformation.EventName;
             txtLocation.Text = eventInformation.Venue.VenueAddress.ToString() + ", " + eventInformation.Venue.VenueCity.ToString() + ", " + eventInformation.Venue.VenueState.ToString();
             txtPrice.Text = eventInformation.EventPriceRange;
