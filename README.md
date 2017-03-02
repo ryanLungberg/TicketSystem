@@ -13,10 +13,13 @@
 ## Before Getting started.-Download project from github
 	
    1) It would be a good Idea to open the Solution in Visual Studio.
+
    2) In the solution explorer under Solution Items, open file named "CreateTicketSystemDB.sql";
+
    3) Run this database script straight from visual studio(this will create your database).
    
    4) In the solution under Solution Items, open file named "InsertTicketSystemDB.sql";
+
    5) Run this script(This will populate your database with some seed data).
    
 ### What we got done.
