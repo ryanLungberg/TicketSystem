@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnReturnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDetail
@@ -114,23 +113,12 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Event Price Range";
             // 
-            // btnReturnHome
-            // 
-            this.btnReturnHome.Location = new System.Drawing.Point(218, 469);
-            this.btnReturnHome.Name = "btnReturnHome";
-            this.btnReturnHome.Size = new System.Drawing.Size(191, 47);
-            this.btnReturnHome.TabIndex = 10;
-            this.btnReturnHome.Text = "Return To Home Page";
-            this.btnReturnHome.UseVisualStyleBackColor = true;
-
-            // 
             // FrmEventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 552);
             this.ControlBox = false;
-            this.Controls.Add(this.btnReturnHome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,7 +128,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEvent);
             this.Controls.Add(this.txtDetail);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmEventDetails";
             this.Text = "Event Details for";
             this.Load += new System.EventHandler(this.FrmEventDetails_Load);
@@ -160,6 +148,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnReturnHome;
     }
 }

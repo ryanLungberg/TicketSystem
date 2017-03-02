@@ -26,7 +26,9 @@ namespace TicketSystem
             this.Dock = DockStyle.Fill;
         }
 
-
+        /// <summary>
+        /// Populate Genre Combobox, will also alway person to see the FK name without having to look up it's ID int
+        /// </summary>
         public void PopulateGenres()
         {
             //TicketSystemDBEntities db = new TicketSystemDBEntities();
@@ -35,7 +37,10 @@ namespace TicketSystem
             cboGenre.DisplayMember = nameof(Genre.GenreName);
             cboGenre.ValueMember = nameof(Genre.GenreID);
         }
-
+        /// <summary>
+        /// Populate Venue Combobox, will also alway person to see the FK name without having to look up it's ID int
+        /// </summary>
+        /// </summary>
         public void PopulateVenue()
         {
             //TicketSystemDBEntities db = new TicketSystemDBEntities();
@@ -44,7 +49,10 @@ namespace TicketSystem
             cboVenue.DisplayMember = nameof(Venue.VenueName);
             cboVenue.ValueMember = nameof(Venue.VenueID);
         }
-
+        /// <summary>
+        /// Populate Performer Combobox, will also alway person to see the FK name without having to look up it's ID int
+        /// </summary>
+        /// </summary>
         public void PopulatePerformer()
         {
             //TicketSystemDBEntities db = new TicketSystemDBEntities();
@@ -73,17 +81,14 @@ namespace TicketSystem
                 ev.VenueID = ((Venue)cboVenue.SelectedItem).VenueID;
                 ev.GenreID = ((Genre)cboGenre.SelectedItem).GenreID;
                 ev.PerformerID = ((Performer)cboPerformer.SelectedItem).PerformerID;
-                //ev.GenreID = cboGenre.SelectedIndex;
-                //ev.PerformerID = cboPerformer.SelectedIndex;
-
-                //TicketSystemDBEntities db = new TicketSystemDBEntities();
-
+                
                 db.Events.Add(ev);
                 int addEventToDatabase = db.SaveChanges();
 
                 if (addEventToDatabase > 0)
                 {
                     MessageBox.Show("You have just created a new event", "Yay!!!!");
+                    ClearData();
                 }
                 else
                 {
@@ -105,6 +110,23 @@ namespace TicketSystem
             {
                 return false;
             }
+        }
+        /// <summary>
+        /// Clear Textbox fields
+        /// </summary>
+        public void ClearData()
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                }
+            }
+            //txtName.Text = "";
+            //txtInfo.Text = "";
+            //txtPrice.Text = "";
+            //txtPromoter.Text = "";
         }
 
     }
