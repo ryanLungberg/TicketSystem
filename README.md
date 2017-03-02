@@ -25,7 +25,7 @@
 ### What we got done.
     * Parent Form -  this contains all child forms, and menustrip which controls all navigation for the program.	
     * Homepage Form - displays list of all events and search capabilities.
-    * create Event For - allows you to create a new event.
+    * create Event Form - allows you to create a new event.
     * create Category Form - allows you to create new genres of events to search by.
     * create Performer Form - allows you to create new performers.
     * create Venue Form - allows user to create new venues.
