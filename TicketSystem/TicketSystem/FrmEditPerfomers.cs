@@ -41,7 +41,8 @@ namespace TicketSystem
             Performer p = cboListOfPerformers.SelectedItem as Performer;
             txtNameOfPerformerToEdit.Text = p.PerformerName;
             txtURLOfPerfomerToEdit.Text = p.PerformerURL;
-            txtInfoOfPerformerToEdit.Text = p.PerformerInfo;        
+            txtInfoOfPerformerToEdit.Text = p.PerformerInfo;
+            txtPerformerID.Text = Convert.ToString(p.PerformerID);       
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
