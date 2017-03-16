@@ -49,21 +49,36 @@ namespace TicketSystem
         {
             if (cboListOfPerformers.SelectedIndex >= 0)
             {
-                int selected = cboListOfPerformers.SelectedIndex;
-                Performer p = new Performer()
-                {
-                    PerformerID = Convert.ToInt32(txtPerformerID.Text),
-                    PerformerName = txtNameOfPerformerToEdit.Text,
-                    PerformerURL = txtURLOfPerfomerToEdit.Text,
-                    PerformerInfo = txtInfoOfPerformerToEdit.Text
-                };
-                bindingPerformers[selected] = p;
+                int selected = Convert.ToInt32(txtPerformerID.Text);
                 TicketSystemDBEntities db = new TicketSystemDBEntities();
-            db.SaveChanges(); //TODO need to do a query in order to save changes in the database
-                MessageBox.Show("Your changes have been made");
+                Performer perfs = (from p1 in db.Performers
+                             where p1.PerformerID == selected
+                             select p1).Single();
+                //db.Performers.Find(Convert.ToInt32(txtPerformerID.Text))
+
+
+
+                perfs.PerformerName = txtNameOfPerformerToEdit.Text;
+                perfs.PerformerURL = txtURLOfPerfomerToEdit.Text;
+                perfs.PerformerInfo = txtInfoOfPerformerToEdit.Text;
+
+                db.Entry(perfs).State = System.Data.Entity.EntityState.Modified;             
+                
+                try
+                {
+                    db.SaveChanges(); //TODO need to do a query in order to save changes in the database
+                    MessageBox.Show("Your changes have been made");
+                }
+                catch  (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
                 
             }
             
         }
+        
+            
     }
 }
