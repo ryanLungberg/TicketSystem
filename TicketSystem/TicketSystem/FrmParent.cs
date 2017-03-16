@@ -121,5 +121,11 @@ namespace TicketSystem
             editPerformers.Show();
            
         }
+
+        private void eventsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditEvents editEvents = new FrmEditEvents();
+            editEvents.Show();
+        }
     }
 }
