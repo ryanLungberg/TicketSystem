@@ -15,7 +15,6 @@ namespace TicketSystem
         public FrmParent()
         {
             InitializeComponent();
-
         }
 
         //This is The Active ChildForm of The Parent Form that contains the Menu strip.
@@ -113,6 +112,18 @@ namespace TicketSystem
         {
             TicketSystem newHomePage = new TicketSystem();
             ChangeChildForm(newHomePage);
+        }
+
+        private void BtnEditEvent_Click(object sender, EventArgs e)
+        {
+            //FrmEditEvent newEditEventForm = new FrmEditEvent();
+            //ChangeChildForm(newEditEventForm);
+        }
+
+        private void BtnEditCategory_Click(object sender, EventArgs e)
+        {
+            frmEditCategory newEditCat = new frmEditCategory();
+            ChangeChildForm(newEditCat);
         }
     }
 }

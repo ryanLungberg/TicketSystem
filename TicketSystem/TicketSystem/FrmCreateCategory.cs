@@ -45,7 +45,7 @@ namespace TicketSystem
                 }
                 else
                 {
-                    MessageBox.Show("Error: Something Went Wrong. Category not uptated");
+                    MessageBox.Show("Error: Something Went Wrong. Category not updated");
                 }
             }
         }

@@ -35,11 +35,12 @@ namespace TicketSystem
         public void populateListBoxWithAllEvents()
         {
             TicketSystemDBEntities db = new TicketSystemDBEntities();
+            db.Database.Connection.Open();
             List<Event> listEvents = db.Events.ToList();
             lstBoxEvents.DataSource = listEvents;
             lstBoxEvents.DisplayMember = nameof(Event.EventNameAndDates);
             lstBoxEvents.ValueMember = nameof(Event.EventID);
-
+            db.Database.Connection.Close();
 
         }
 

@@ -36,6 +36,11 @@
             this.BtnCreateCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnCreatePerformer = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnCreateVenue = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnEditEvent = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnEditCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnEditPerformer = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnEditVenue = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +67,8 @@
             // btnMenu
             // 
             this.btnMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createEventToolStripMenuItem});
+            this.createEventToolStripMenuItem,
+            this.editToolStripMenuItem});
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(50, 22);
             this.btnMenu.Text = "Menu";
@@ -75,7 +81,7 @@
             this.BtnCreatePerformer,
             this.BtnCreateVenue});
             this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
-            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.createEventToolStripMenuItem.Text = "Create";
             // 
             // BtnCreateEvent
@@ -105,6 +111,43 @@
             this.BtnCreateVenue.Size = new System.Drawing.Size(127, 22);
             this.BtnCreateVenue.Text = "Venue";
             this.BtnCreateVenue.Click += new System.EventHandler(this.BtnCreateVenue_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnEditEvent,
+            this.BtnEditCategory,
+            this.BtnEditPerformer,
+            this.BtnEditVenue});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // BtnEditEvent
+            // 
+            this.BtnEditEvent.Name = "BtnEditEvent";
+            this.BtnEditEvent.Size = new System.Drawing.Size(152, 22);
+            this.BtnEditEvent.Text = "Event";
+            this.BtnEditEvent.Click += new System.EventHandler(this.BtnEditEvent_Click);
+            // 
+            // BtnEditCategory
+            // 
+            this.BtnEditCategory.Name = "BtnEditCategory";
+            this.BtnEditCategory.Size = new System.Drawing.Size(152, 22);
+            this.BtnEditCategory.Text = "Category";
+            this.BtnEditCategory.Click += new System.EventHandler(this.BtnEditCategory_Click);
+            // 
+            // BtnEditPerformer
+            // 
+            this.BtnEditPerformer.Name = "BtnEditPerformer";
+            this.BtnEditPerformer.Size = new System.Drawing.Size(152, 22);
+            this.BtnEditPerformer.Text = "Performer";
+            // 
+            // BtnEditVenue
+            // 
+            this.BtnEditVenue.Name = "BtnEditVenue";
+            this.BtnEditVenue.Size = new System.Drawing.Size(152, 22);
+            this.BtnEditVenue.Text = "Venue";
             // 
             // homeToolStripMenuItem
             // 
@@ -146,5 +189,10 @@
         private System.Windows.Forms.ToolStripMenuItem BtnCreatePerformer;
         private System.Windows.Forms.ToolStripMenuItem BtnCreateVenue;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BtnEditEvent;
+        private System.Windows.Forms.ToolStripMenuItem BtnEditCategory;
+        private System.Windows.Forms.ToolStripMenuItem BtnEditPerformer;
+        private System.Windows.Forms.ToolStripMenuItem BtnEditVenue;
     }
 }
