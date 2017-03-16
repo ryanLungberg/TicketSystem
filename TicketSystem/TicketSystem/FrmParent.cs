@@ -125,5 +125,11 @@ namespace TicketSystem
             frmEditCategory newEditCat = new frmEditCategory();
             ChangeChildForm(newEditCat);
         }
+
+        private void BtnEditVenue_Click(object sender, EventArgs e)
+        {
+            frmEditVenue newEditVenue = new frmEditVenue();
+            ChangeChildForm(newEditVenue);
+        }
     }
 }

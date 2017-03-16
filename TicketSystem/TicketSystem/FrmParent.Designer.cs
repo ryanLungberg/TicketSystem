@@ -148,6 +148,7 @@
             this.BtnEditVenue.Name = "BtnEditVenue";
             this.BtnEditVenue.Size = new System.Drawing.Size(152, 22);
             this.BtnEditVenue.Text = "Venue";
+            this.BtnEditVenue.Click += new System.EventHandler(this.BtnEditVenue_Click);
             // 
             // homeToolStripMenuItem
             // 

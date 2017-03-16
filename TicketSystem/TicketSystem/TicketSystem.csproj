@@ -94,6 +94,12 @@
     <Compile Include="frmEditCategory.Designer.cs">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditVenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditVenue.Designer.cs">
+      <DependentUpon>frmEditVenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEventDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditCategory.resx">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditVenue.resx">
+      <DependentUpon>frmEditVenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEventDetails.resx">
       <DependentUpon>FrmEventDetails.cs</DependentUpon>
